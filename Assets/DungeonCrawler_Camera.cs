@@ -8,7 +8,7 @@ public class DungeonCrawler_Camera : MonoBehaviour
     void Start()
     {
         // find the object we want to look at
-        GameObject target = GameObject.Find("Car");
+        GameObject target = GameObject.Find("Car_P2");
 
         offset = transform.position - target.transform.position;
 
@@ -16,14 +16,14 @@ public class DungeonCrawler_Camera : MonoBehaviour
         Transform t = gameObject.transform;
         t.position = new Vector3 (111.7f, 50.0f, 25.7f);
 
-        transform.Rotate(90, 0, 0);
+        transform.rotation = Quaternion.Euler(90, 0, 0);
     }
 
     // Update is called once per frame
     void Update()
     {
         // find the object we want to look at
-        GameObject target = GameObject.Find("Car");
+        GameObject target = GameObject.Find("Car_P2");
 
         Vector3 newPos = target.transform.position + offset;
         transform.position = newPos;

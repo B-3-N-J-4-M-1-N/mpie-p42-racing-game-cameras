@@ -13,7 +13,7 @@ public class Static_Camera : MonoBehaviour
     void Update()
     {
         // find the object we want to look at
-        GameObject target = GameObject.Find("Car");
+        GameObject target = GameObject.Find("Car_P1");
         // get the current game object's (e.g. the camera) 
         // transform and make it look at the target's transform
         gameObject.transform.LookAt(target.transform);
